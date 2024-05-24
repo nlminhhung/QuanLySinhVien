@@ -40,9 +40,9 @@ namespace QuanLySinhVien
                 DateTime ngaySinh = date_ngaysinh.Value;
                 string diaChi = tb_diachi.Text;
 
-                if (mssv.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
-                if (tenSV.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
-                if (ngaySinh.GetType() != typeof(DateTime)) { MessageBox.Show("Vui long nhap dung kieu!"); return; }
+                if (mssv.Trim() == "") { MessageBox.Show("ID is required!"); return; }
+                if (tenSV.Trim() == "") { MessageBox.Show("Name is required!"); return; }
+                if (ngaySinh.GetType() != typeof(DateTime)) { MessageBox.Show("Date of birth is not valid!"); return; }
                 Student sv = new Student(tenSV, mssv, diaChi, ngaySinh);
 
                 Modify.ModifyStudent.insertSinhVien(sv);
@@ -51,7 +51,7 @@ namespace QuanLySinhVien
             }
             catch
             {
-                MessageBox.Show("MSSV da duoc su dung!");
+                MessageBox.Show("ID has been used!");
                 //MessageBox.Show(ex.Message);
                 return;
             }
@@ -79,7 +79,7 @@ namespace QuanLySinhVien
             }
             catch
             {
-                MessageBox.Show("Khong tim thay sinh vien can xoa!");
+                MessageBox.Show("Can not find student to delete!");
                 //MessageBox.Show(ex.Message);
             }
         }
@@ -92,10 +92,10 @@ namespace QuanLySinhVien
                 string tenSV = tb_tenSV.Text;
                 DateTime ngaySinh = date_ngaysinh.Value;
                 string diaChi = tb_diachi.Text;
-                if (mssv.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
-                if (tenSV.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
+                if (mssv.Trim() == "") { MessageBox.Show("ID is required!"); return; }
+                if (tenSV.Trim() == "") { MessageBox.Show("Name is required!"); return; }
                 if (diaChi.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
-                if (ngaySinh.GetType() != typeof(DateTime)) { MessageBox.Show("Vui long nhap dung kieu!"); return; }
+                if (ngaySinh.GetType() != typeof(DateTime)) { MessageBox.Show("Date of birth is not valid!"); return; }
                 Student sv = new Student(tenSV, mssv, diaChi, ngaySinh);
 
                 Modify.ModifyStudent.updateSinhVien(sv);
@@ -103,7 +103,7 @@ namespace QuanLySinhVien
             }
             catch
             {
-                MessageBox.Show("Da co loi xay ra!");
+                MessageBox.Show("Something went wrong!");
                 //MessageBox.Show(ex.Message);
                 return;
             }
@@ -128,7 +128,7 @@ namespace QuanLySinhVien
             }
             catch
             {
-                MessageBox.Show("Vui long nhan vao hang hoc sinh");
+                MessageBox.Show("Please click into row of student");
             }
         }
 

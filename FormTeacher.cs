@@ -35,9 +35,9 @@ namespace QuanLySinhVien
                 string name = tb_name.Text;
                 string address = tb_address.Text;
 
-                if (teacherID.Trim() == "") { MessageBox.Show("ID field is empty!"); return; }
-                if (name.Trim() == "") { MessageBox.Show("Name field is empty!"); return; }
-                if (address.Trim() == "") { MessageBox.Show("Address field is empty!"); return; }
+                if (teacherID.Trim() == "") { MessageBox.Show("ID field is required!"); return; }
+                if (name.Trim() == "") { MessageBox.Show("Name field is required!"); return; }
+                if (address.Trim() == "") { MessageBox.Show("Address field is required!"); return; }
                 Teacher teacher = new Teacher(name, teacherID, address);
 
                 Modify.ModifyTeacher.insertTeacher(teacher);
@@ -82,9 +82,9 @@ namespace QuanLySinhVien
                 string teacherID = tb_teacherID.Text;
                 string name = tb_name.Text;
                 string address = tb_address.Text;
-                if (teacherID.Trim() == "") { MessageBox.Show("ID field is empty!"); return; }
-                if (name.Trim() == "") { MessageBox.Show("Name field is empty!"); return; }
-                if (address.Trim() == "") { MessageBox.Show("Address field is empty!!"); return; }
+                if (teacherID.Trim() == "") { MessageBox.Show("ID field is required!"); return; }
+                if (name.Trim() == "") { MessageBox.Show("Name field is required!"); return; }
+                if (address.Trim() == "") { MessageBox.Show("Address field is required!!"); return; }
                 Teacher teacher = new Teacher(name, teacherID, address);
 
                 Modify.ModifyTeacher.updateTeacher(teacher);

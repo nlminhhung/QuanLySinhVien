@@ -42,7 +42,7 @@ namespace QuanLySinhVien
             }
             else
             {
-                throw new ArgumentOutOfRangeException("points", "Points must be between 0 and 100.");
+                throw new ArgumentOutOfRangeException("Points must be between 0 and 100.");
             }
         }
 

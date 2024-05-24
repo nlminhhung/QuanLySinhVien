@@ -54,11 +54,17 @@ namespace QuanLySinhVien
                 string courseID = tb_courseID.Text;
                 string courseName = tb_courseName.Text;
 
-                if (courseID.Trim() == "") { MessageBox.Show("Empty field ID!"); return; }
-                if (courseName.Trim() == "") { MessageBox.Show("Empty field name!"); return; }
+                if (courseID.Trim() == "") { 
+                    MessageBox.Show("courseID is required!");
+                    return; 
+                }
+                if (courseName.Trim() == "") { 
+                    MessageBox.Show("courseName is required!"); 
+                    return; 
+                }
                 if (courseYear.GetType() != typeof(int) || courseYear < 0)
                 {
-                    MessageBox.Show("Please Enter Again!");
+                    MessageBox.Show("courseYear is not valid");
                     return;
                 }
                 DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
@@ -69,7 +75,7 @@ namespace QuanLySinhVien
             }
             catch
             {
-                MessageBox.Show("Please Enter Again!");
+                MessageBox.Show("Something went wrong");
             }
         }
 
@@ -95,7 +101,7 @@ namespace QuanLySinhVien
             {
                 MessageBox.Show(ex.Message);
 
-                MessageBox.Show("Khong tim thay sinh vien can xoa!");
+                MessageBox.Show("Student is not found for delete!");
             }
         }
 
@@ -111,7 +117,7 @@ namespace QuanLySinhVien
             }
             catch
             {
-                MessageBox.Show("Vui long nhan vao hang hoc sinh");
+                MessageBox.Show("Please choose student in viewboard to do this action");
             }
         }
 
@@ -126,16 +132,16 @@ namespace QuanLySinhVien
                 DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
                 string teacherID = teacherRow.Cells[1].Value.ToString();
 
-                if (courseID.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
-                if (courseName.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
-                if (year.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
+                if (courseID.Trim() == "") { MessageBox.Show("courseID is required!"); return; }
+                if (courseName.Trim() == "") { MessageBox.Show("courseName is required!"); return; }
+                if (year.Trim() == "") { MessageBox.Show("year is required!"); return; }
                 Course course = new Course(courseName, courseID, courseYear, teacherID);
                 Modify.ModifyCourse.updateCourse(course);
                 dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
             }
             catch
             {
-                MessageBox.Show("Da co loi xay ra!");
+                MessageBox.Show("Something went wrong!");
                 return;
             }
         }

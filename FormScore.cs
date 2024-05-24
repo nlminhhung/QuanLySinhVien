@@ -70,11 +70,6 @@ namespace QuanLySinhVien
             try
             {
                 float points = float.Parse(tb_points.Text); // Get Points 
-                if (points.GetType() != typeof(float) || points < 0 || points > 100)
-                {
-                    MessageBox.Show("Please Enter Again!");
-                    return;
-                }
                 DataGridViewRow studentRow = dataGridView1.Rows[STUDENT_ROW_INDEX];
                 DataGridViewRow courseRow = dataGridView2.Rows[COURSE_ROW_INDEX];
                 string studentID = studentRow.Cells[1].Value.ToString();
@@ -84,8 +79,12 @@ namespace QuanLySinhVien
                 Modify.ModifyGrade.insertGrade(grade);
                 bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
             }
-            catch { 
-                MessageBox.Show("Please Enter Again!");
+            catch(ArgumentOutOfRangeException err)
+            {
+                MessageBox.Show($"{err.Message}");
+            }
+            catch (Exception err){ 
+                MessageBox.Show("Something went wrong!");
             }
         }
 
@@ -112,7 +111,7 @@ namespace QuanLySinhVien
             }
             catch
             {
-                MessageBox.Show("Khong tim thay sinh vien can xoa!");
+                MessageBox.Show("Student is not found for delete!");
                 //MessageBox.Show(ex.Message);
             }
         }
