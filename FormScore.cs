@@ -41,8 +41,8 @@ namespace QuanLySinhVien
                 }
 
                 DataGridViewCheckBoxCell clickedCheckBox = dataGridView1.Rows[e.RowIndex].Cells["cb_chosenStudent"] as DataGridViewCheckBoxCell;
-                clickedCheckBox.Value = !Convert.ToBoolean(clickedCheckBox.Value);
-                STUDENT_ROW_INDEX = e.RowIndex;
+                clickedCheckBox.Value = !Convert.ToBoolean(clickedCheckBox.Value);            
+                STUDENT_ROW_INDEX = Convert.ToBoolean(clickedCheckBox.Value) ? e.RowIndex : -1;
             }
         }
 
@@ -61,7 +61,7 @@ namespace QuanLySinhVien
 
                 DataGridViewCheckBoxCell clickedCheckBox = dataGridView2.Rows[e.RowIndex].Cells["cb_chosenCourse"] as DataGridViewCheckBoxCell;
                 clickedCheckBox.Value = !Convert.ToBoolean(clickedCheckBox.Value);
-                COURSE_ROW_INDEX = e.RowIndex;
+                COURSE_ROW_INDEX = Convert.ToBoolean(clickedCheckBox.Value) ? e.RowIndex : -1;
             }
         }
 
@@ -133,10 +133,10 @@ namespace QuanLySinhVien
             Form2_Load(sender, e);
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void tEACHERToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form formTeacher = new FormTeacher();
+            formTeacher.ShowDialog();
         }
-
     }
 }

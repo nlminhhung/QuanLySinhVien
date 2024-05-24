@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLySinhVien.Class;
 
 namespace QuanLySinhVien.Modify
 {
@@ -27,5 +28,46 @@ namespace QuanLySinhVien.Modify
                 return dt;
             }
         }
+
+        public static void insertTeacher(Teacher teacher)
+        {
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("pr_insertTeacher", conn);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Name", teacher.Name);
+                command.Parameters.AddWithValue("@TeacherID", teacher.TeacherID);
+                command.Parameters.AddWithValue("@Address", teacher.Address);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public static void deleteTeacher(string teacherID)
+        {
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("pr_deleteTeacher", conn);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@TeacherID", teacherID);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public static void updateTeacher(Teacher teacher)
+        {
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("pr_updateTeacher", conn);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Name", teacher.Name);
+                command.Parameters.AddWithValue("@TeacherID", teacher.TeacherID);
+                command.Parameters.AddWithValue("@Address", teacher.Address);
+                command.ExecuteNonQuery();
+            }
+        }
+
     }
 }

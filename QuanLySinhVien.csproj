@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Course.cs" />
+    <Compile Include="Class\Teacher.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="firstDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -57,6 +58,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>firstDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="firstDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firstDBDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormCourse.cs">
       <SubType>Form</SubType>
@@ -71,6 +77,12 @@
       <DependentUpon>FormScore.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Grade.cs" />
+    <Compile Include="FormTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeacher.Designer.cs">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modify\ModifyCourse.cs" />
     <Compile Include="Modify\ModifyGrade.cs" />
     <Compile Include="Modify\ModifyStudent.cs" />
@@ -97,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormScore.resx">
       <DependentUpon>FormScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeacher.resx">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +154,17 @@
     </None>
     <None Include="firstDBDataSet2.xss">
       <DependentUpon>firstDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="firstDBDataSet3.xsc">
+      <DependentUpon>firstDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="firstDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>firstDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="firstDBDataSet3.xss">
+      <DependentUpon>firstDBDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
