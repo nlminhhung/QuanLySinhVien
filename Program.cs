@@ -16,7 +16,7 @@ namespace QuanLySinhVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormScore());
+            Application.Run(new FormMenu());
         }
     }
 }

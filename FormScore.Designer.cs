@@ -70,9 +70,9 @@
             this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sTUDENTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOURSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tEACHERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rELOADToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.tEACHERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bandDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSet)).BeginInit();
@@ -388,6 +388,13 @@
             this.cOURSEToolStripMenuItem.Text = "COURSE";
             this.cOURSEToolStripMenuItem.Click += new System.EventHandler(this.cOURSEToolStripMenuItem_Click);
             // 
+            // tEACHERToolStripMenuItem
+            // 
+            this.tEACHERToolStripMenuItem.Name = "tEACHERToolStripMenuItem";
+            this.tEACHERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tEACHERToolStripMenuItem.Text = "TEACHER";
+            this.tEACHERToolStripMenuItem.Click += new System.EventHandler(this.tEACHERToolStripMenuItem_Click);
+            // 
             // rELOADToolStripMenuItem
             // 
             this.rELOADToolStripMenuItem.Name = "rELOADToolStripMenuItem";
@@ -403,13 +410,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(336, 156);
             this.richTextBox1.TabIndex = 31;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // tEACHERToolStripMenuItem
-            // 
-            this.tEACHERToolStripMenuItem.Name = "tEACHERToolStripMenuItem";
-            this.tEACHERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tEACHERToolStripMenuItem.Text = "TEACHER";
-            this.tEACHERToolStripMenuItem.Click += new System.EventHandler(this.tEACHERToolStripMenuItem_Click);
             // 
             // FormScore
             // 

@@ -70,6 +70,12 @@
     <Compile Include="FormCourse.Designer.cs">
       <DependentUpon>FormCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormScore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
       <DependentUpon>FormScore.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Grade.cs" />
+    <Compile Include="FormStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStatistics.Designer.cs">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +97,7 @@
     </Compile>
     <Compile Include="Modify\ModifyCourse.cs" />
     <Compile Include="Modify\ModifyGrade.cs" />
+    <Compile Include="Modify\ModifyStatistics.cs" />
     <Compile Include="Modify\ModifyStudent.cs" />
     <Compile Include="Class\Student.cs" />
     <Compile Include="firstDBDataSet.Designer.cs">
@@ -103,6 +116,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCourse.resx">
       <DependentUpon>FormCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStatistics.resx">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
