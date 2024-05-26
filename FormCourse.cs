@@ -46,64 +46,7 @@ namespace QuanLySinhVien
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int courseYear = int.Parse(tb_courseYear.Text); 
-                string courseID = tb_courseID.Text;
-                string courseName = tb_courseName.Text;
-
-                if (courseID.Trim() == "") { 
-                    MessageBox.Show("courseID is required!");
-                    return; 
-                }
-                if (courseName.Trim() == "") { 
-                    MessageBox.Show("courseName is required!"); 
-                    return; 
-                }
-                if (courseYear.GetType() != typeof(int) || courseYear < 0)
-                {
-                    MessageBox.Show("courseYear is not valid");
-                    return;
-                }
-                DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
-                string teacherID = teacherRow.Cells[1].Value.ToString();       
-                Course course = new Course(courseName, courseID, courseYear, teacherID);
-                Modify.ModifyCourse.insertCourse(course);
-                dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
-            }
-            catch
-            {
-                MessageBox.Show("Something went wrong");
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                List<DataGridViewRow> rows = new List<DataGridViewRow>();
-                foreach (DataGridViewRow row in dataGridView2.Rows)
-                {
-                    if (Convert.ToBoolean(row.Cells["cb_chosenCourse"].Value) == true)
-                    {
-                        rows.Add(row);
-                    }
-                }
-                foreach (DataGridViewRow row in rows)
-                {
-                    Modify.ModifyCourse.deleteCourse(row.Cells[1].Value.ToString());
-                }
-                dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-                MessageBox.Show("Student is not found for delete!");
-            }
-        }
+   
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -121,31 +64,6 @@ namespace QuanLySinhVien
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string courseID = tb_courseID.Text;
-                string courseName = tb_courseName.Text;
-                string year = tb_courseYear.Text;
-                int courseYear = int.Parse(year);
-                DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
-                string teacherID = teacherRow.Cells[1].Value.ToString();
-
-                if (courseID.Trim() == "") { MessageBox.Show("courseID is required!"); return; }
-                if (courseName.Trim() == "") { MessageBox.Show("courseName is required!"); return; }
-                if (year.Trim() == "") { MessageBox.Show("year is required!"); return; }
-                Course course = new Course(courseName, courseID, courseYear, teacherID);
-                Modify.ModifyCourse.updateCourse(course);
-                dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
-            }
-            catch
-            {
-                MessageBox.Show("Something went wrong!");
-                return;
-            }
-        }
-
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -155,23 +73,24 @@ namespace QuanLySinhVien
         {
             try
             {
-                int courseYear = int.Parse(tb_courseYear.Text);
                 string courseID = tb_courseID.Text;
                 string courseName = tb_courseName.Text;
+                
 
                 if (courseID.Trim() == "")
                 {
-                    MessageBox.Show("courseID is required!");
+                    MessageBox.Show("courseID is required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (courseName.Trim() == "")
                 {
-                    MessageBox.Show("courseName is required!");
+                    MessageBox.Show("courseName is required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                int courseYear = int.Parse(tb_courseYear.Text);
                 if (courseYear.GetType() != typeof(int) || courseYear < 0)
                 {
-                    MessageBox.Show("courseYear is not valid");
+                    MessageBox.Show("courseYear is not valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
@@ -179,15 +98,19 @@ namespace QuanLySinhVien
                 Course course = new Course(courseName, courseID, courseYear, teacherID);
                 Modify.ModifyCourse.insertCourse(course);
                 dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
+                MessageBox.Show( "Add course successfully", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show( "Something went wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show( "Are you want to edit?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.No)
+                return;
             try
             {
                 string courseID = tb_courseID.Text;
@@ -197,22 +120,26 @@ namespace QuanLySinhVien
                 DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
                 string teacherID = teacherRow.Cells[1].Value.ToString();
 
-                if (courseID.Trim() == "") { MessageBox.Show("courseID is required!"); return; }
-                if (courseName.Trim() == "") { MessageBox.Show("courseName is required!"); return; }
-                if (year.Trim() == "") { MessageBox.Show("year is required!"); return; }
+                if (courseID.Trim() == "") { MessageBox.Show("courseID is required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                if (courseName.Trim() == "") { MessageBox.Show("courseName is required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                if (year.Trim() == "") { MessageBox.Show("year is required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                 Course course = new Course(courseName, courseID, courseYear, teacherID);
                 Modify.ModifyCourse.updateCourse(course);
                 dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
+                MessageBox.Show( "Edit course successfully", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Something went wrong!");
+                MessageBox.Show( "Something went wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show( "Are you want to delete?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.No)
+                return;
             try
             {
                 List<DataGridViewRow> rows = new List<DataGridViewRow>();
@@ -228,12 +155,12 @@ namespace QuanLySinhVien
                     Modify.ModifyCourse.deleteCourse(row.Cells[1].Value.ToString());
                 }
                 dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
+                MessageBox.Show( "Delete course successfully", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
-                MessageBox.Show("Student is not found for delete!");
+                //MessageBox.Show(ex.Message);
+                MessageBox.Show( "Course is not found for delete!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

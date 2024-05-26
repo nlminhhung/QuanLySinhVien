@@ -66,29 +66,6 @@ namespace QuanLySinhVien
             }
         }
 
-        private void bt_add_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                float points = float.Parse(tb_points.Text); // Get Points 
-                DataGridViewRow studentRow = dataGridView1.Rows[STUDENT_ROW_INDEX];
-                DataGridViewRow courseRow = dataGridView2.Rows[COURSE_ROW_INDEX];
-                string studentID = studentRow.Cells[1].Value.ToString();
-                string courseID = courseRow.Cells[1].Value.ToString();
-
-                Grade grade = new Grade(studentID, courseID, points);
-                Modify.ModifyGrade.insertGrade(grade);
-                bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
-            }
-            catch(ArgumentOutOfRangeException err)
-            {
-                MessageBox.Show($"{err.Message}");
-            }
-            catch (Exception err){ 
-                MessageBox.Show("Something went wrong!");
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -162,19 +139,27 @@ namespace QuanLySinhVien
                 Grade grade = new Grade(studentID, courseID, points);
                 Modify.ModifyGrade.insertGrade(grade);
                 bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
+                MessageBox.Show( "Add score successfully", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ArgumentOutOfRangeException err)
             {
-                MessageBox.Show($"{err.Message}");
+                MessageBox.Show( $"{err.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch(FormatException err)
+            {
+                MessageBox.Show( $"{err.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception err)
             {
-                MessageBox.Show("Something went wrong!");
+                MessageBox.Show( "Something went wrong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show( "Are you want to delete?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.No)
+                return;
             try
             {
                 List<DataGridViewRow> rows = new List<DataGridViewRow>();
@@ -193,10 +178,13 @@ namespace QuanLySinhVien
                     Modify.ModifyGrade.deleteGrade(courseID, studentID);
                 }
                 bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
+                MessageBox.Show( "Delete score successfully", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch
             {
-                MessageBox.Show("Student is not found for delete!");
+                MessageBox.Show( "Field is not found for delete!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 //MessageBox.Show(ex.Message);
             }
         }
@@ -252,6 +240,9 @@ namespace QuanLySinhVien
 
         private void Updatebtnguna2_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show( "Are you want to edit?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.No)
+                return;
             try
             {
                  List<DataGridViewRow> rows = new List<DataGridViewRow>();
@@ -295,13 +286,16 @@ namespace QuanLySinhVien
 
                 }
                 bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
+                MessageBox.Show( "Edit score successfully", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
-            catch(ArgumentOutOfRangeException arex) { 
-                MessageBox.Show($"{arex.Message}");
-            }
-            catch (Exception ex)
+            catch (ArgumentOutOfRangeException err)
             {
-                MessageBox.Show($"An error occurred:\n {ex.Message}");
+                MessageBox.Show( $"{err.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show( "Something went wrong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
