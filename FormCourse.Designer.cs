@@ -193,6 +193,7 @@
             this.groupBox1.Size = new System.Drawing.Size(752, 160);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -262,13 +263,13 @@
             this.ExitBtn.ForeColor = System.Drawing.Color.Black;
             this.ExitBtn.HoverState.Parent = this.ExitBtn;
             this.ExitBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ExitBtn.Location = new System.Drawing.Point(548, 105);
+            this.ExitBtn.Location = new System.Drawing.Point(511, 105);
             this.ExitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.ShadowDecoration.Parent = this.ExitBtn;
             this.ExitBtn.Size = new System.Drawing.Size(100, 47);
             this.ExitBtn.TabIndex = 44;
-            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.Text = "EXIT";
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // EditBtn
@@ -280,13 +281,13 @@
             this.EditBtn.ForeColor = System.Drawing.Color.Black;
             this.EditBtn.HoverState.Parent = this.EditBtn;
             this.EditBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.EditBtn.Location = new System.Drawing.Point(419, 105);
+            this.EditBtn.Location = new System.Drawing.Point(382, 105);
             this.EditBtn.Margin = new System.Windows.Forms.Padding(4);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.ShadowDecoration.Parent = this.EditBtn;
             this.EditBtn.Size = new System.Drawing.Size(100, 47);
             this.EditBtn.TabIndex = 43;
-            this.EditBtn.Text = "Edit";
+            this.EditBtn.Text = "EDIT";
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // DeleteBtn
@@ -298,7 +299,7 @@
             this.DeleteBtn.ForeColor = System.Drawing.Color.Black;
             this.DeleteBtn.HoverState.Parent = this.DeleteBtn;
             this.DeleteBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.DeleteBtn.Location = new System.Drawing.Point(295, 105);
+            this.DeleteBtn.Location = new System.Drawing.Point(258, 105);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.ShadowDecoration.Parent = this.DeleteBtn;
@@ -316,7 +317,7 @@
             this.AddBtn.ForeColor = System.Drawing.Color.Black;
             this.AddBtn.HoverState.Parent = this.AddBtn;
             this.AddBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.AddBtn.Location = new System.Drawing.Point(167, 105);
+            this.AddBtn.Location = new System.Drawing.Point(130, 105);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(4);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.ShadowDecoration.Parent = this.AddBtn;

@@ -216,7 +216,7 @@
             this.ExitBtn.ShadowDecoration.Parent = this.ExitBtn;
             this.ExitBtn.Size = new System.Drawing.Size(100, 47);
             this.ExitBtn.TabIndex = 40;
-            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.Text = "EXIT";
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // EditBtn
@@ -234,7 +234,7 @@
             this.EditBtn.ShadowDecoration.Parent = this.EditBtn;
             this.EditBtn.Size = new System.Drawing.Size(100, 47);
             this.EditBtn.TabIndex = 39;
-            this.EditBtn.Text = "Edit";
+            this.EditBtn.Text = "EDIT";
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // DeleteBtn
