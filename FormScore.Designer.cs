@@ -63,9 +63,6 @@
             this.courseTableAdapter1 = new QuanLySinhVien.firstDBDataSet2TableAdapters.CourseTableAdapter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.bt_add = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sTUDENTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +70,9 @@
             this.tEACHERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rELOADToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.groupBox1.SuspendLayout();
+            this.c = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteBtnGuna2 = new Guna.UI2.WinForms.Guna2Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.bandDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSetBindingSource)).BeginInit();
@@ -93,29 +92,31 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_points
             // 
-            this.tb_points.Location = new System.Drawing.Point(125, 442);
+            this.tb_points.Location = new System.Drawing.Point(105, 19);
             this.tb_points.Name = "tb_points";
             this.tb_points.Size = new System.Drawing.Size(200, 20);
             this.tb_points.TabIndex = 17;
+            this.tb_points.TextChanged += new System.EventHandler(this.tb_points_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 437);
+            this.label1.Location = new System.Drawing.Point(19, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 24);
             this.label1.TabIndex = 14;
             this.label1.Text = "Points";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bandDiem);
-            this.groupBox1.Location = new System.Drawing.Point(207, 510);
+            this.groupBox1.Location = new System.Drawing.Point(192, 397);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(899, 221);
             this.groupBox1.TabIndex = 22;
@@ -128,9 +129,9 @@
             this.bandDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bandDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gradeCol});
-            this.bandDiem.Location = new System.Drawing.Point(26, 29);
+            this.bandDiem.Location = new System.Drawing.Point(198, 425);
             this.bandDiem.Name = "bandDiem";
-            this.bandDiem.Size = new System.Drawing.Size(848, 172);
+            this.bandDiem.Size = new System.Drawing.Size(887, 172);
             this.bandDiem.TabIndex = 0;
             // 
             // gradeCol
@@ -256,9 +257,9 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cb_chosenCourse});
-            this.dataGridView2.Location = new System.Drawing.Point(22, 19);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 19);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(557, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(589, 157);
             this.dataGridView2.TabIndex = 25;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -316,41 +317,12 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(631, 208);
+            this.groupBox3.Location = new System.Drawing.Point(629, 200);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(599, 183);
+            this.groupBox3.Size = new System.Drawing.Size(601, 191);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Choose Course";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Location = new System.Drawing.Point(25, 397);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(311, 88);
-            this.groupBox4.TabIndex = 28;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Enter Points";
-            // 
-            // bt_add
-            // 
-            this.bt_add.Location = new System.Drawing.Point(385, 432);
-            this.bt_add.Name = "bt_add";
-            this.bt_add.Size = new System.Drawing.Size(75, 38);
-            this.bt_add.TabIndex = 0;
-            this.bt_add.Text = "Add";
-            this.bt_add.UseVisualStyleBackColor = true;
-            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(482, 432);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // menuStrip1
             // 
@@ -360,9 +332,10 @@
             this.rELOADToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1242, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1245, 24);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // selectToolStripMenuItem
             // 
@@ -404,25 +377,72 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.richTextBox1.Location = new System.Drawing.Point(0, 27);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(336, 156);
             this.richTextBox1.TabIndex = 31;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // c
+            // 
+            this.c.CheckedState.Parent = this.c;
+            this.c.CustomImages.Parent = this.c;
+            this.c.FillColor = System.Drawing.Color.Azure;
+            this.c.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.c.ForeColor = System.Drawing.Color.Black;
+            this.c.HoverState.Parent = this.c;
+            this.c.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c.Location = new System.Drawing.Point(105, 44);
+            this.c.Name = "c";
+            this.c.ShadowDecoration.Parent = this.c;
+            this.c.Size = new System.Drawing.Size(75, 38);
+            this.c.TabIndex = 32;
+            this.c.Text = "ADD";
+            this.c.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // DeleteBtnGuna2
+            // 
+            this.DeleteBtnGuna2.CheckedState.Parent = this.DeleteBtnGuna2;
+            this.DeleteBtnGuna2.CustomImages.Parent = this.DeleteBtnGuna2;
+            this.DeleteBtnGuna2.FillColor = System.Drawing.Color.Azure;
+            this.DeleteBtnGuna2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DeleteBtnGuna2.ForeColor = System.Drawing.Color.Black;
+            this.DeleteBtnGuna2.HoverState.Parent = this.DeleteBtnGuna2;
+            this.DeleteBtnGuna2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.DeleteBtnGuna2.Location = new System.Drawing.Point(213, 44);
+            this.DeleteBtnGuna2.Name = "DeleteBtnGuna2";
+            this.DeleteBtnGuna2.ShadowDecoration.Parent = this.DeleteBtnGuna2;
+            this.DeleteBtnGuna2.Size = new System.Drawing.Size(75, 38);
+            this.DeleteBtnGuna2.TabIndex = 33;
+            this.DeleteBtnGuna2.Text = "DELETE";
+            this.DeleteBtnGuna2.Click += new System.EventHandler(this.guna2Button1_Click_1);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.DeleteBtnGuna2);
+            this.groupBox4.Controls.Add(this.c);
+            this.groupBox4.Controls.Add(this.tb_points);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Location = new System.Drawing.Point(480, 106);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(311, 88);
+            this.groupBox4.TabIndex = 28;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Enter Points";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // FormScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1242, 748);
+            this.ClientSize = new System.Drawing.Size(1245, 629);
+            this.Controls.Add(this.bandDiem);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.bt_add);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_points);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -432,7 +452,6 @@
             this.Name = "FormScore";
             this.Text = "SCORES";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bandDiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSetBindingSource)).EndInit();
@@ -453,6 +472,8 @@
             this.groupBox3.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,9 +506,6 @@
         private firstDBDataSet2TableAdapters.CourseTableAdapter courseTableAdapter1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button bt_add;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn cb_chosenStudent;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentIDCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameCol;
@@ -502,5 +520,8 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripMenuItem cOURSEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tEACHERToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2Button c;
+        private Guna.UI2.WinForms.Guna2Button DeleteBtnGuna2;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }

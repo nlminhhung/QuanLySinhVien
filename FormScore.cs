@@ -137,5 +137,116 @@ namespace QuanLySinhVien
             Form formTeacher = new FormTeacher();
             formTeacher.ShowDialog();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_points_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                float points = float.Parse(tb_points.Text); // Get Points 
+                DataGridViewRow studentRow = dataGridView1.Rows[STUDENT_ROW_INDEX];
+                DataGridViewRow courseRow = dataGridView2.Rows[COURSE_ROW_INDEX];
+                string studentID = studentRow.Cells[1].Value.ToString();
+                string courseID = courseRow.Cells[1].Value.ToString();
+
+                Grade grade = new Grade(studentID, courseID, points);
+                Modify.ModifyGrade.insertGrade(grade);
+                bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
+            }
+            catch (ArgumentOutOfRangeException err)
+            {
+                MessageBox.Show($"{err.Message}");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Something went wrong!");
+            }
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                List<DataGridViewRow> rows = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in bandDiem.Rows)
+                {
+                    if (Convert.ToBoolean(row.Cells["gradeCol"].Value) == true)
+                    {
+                        rows.Add(row);
+                    }
+                }
+                foreach (DataGridViewRow row in rows)
+                {
+                    string studentID = row.Cells[1].Value.ToString();
+                    string courseID = row.Cells[2].Value.ToString();
+
+                    Modify.ModifyGrade.deleteGrade(courseID, studentID);
+                }
+                bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
+            }
+            catch
+            {
+                MessageBox.Show("Student is not found for delete!");
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["cb_chosenStudent"].Index && e.RowIndex >= 0)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Index != e.RowIndex)
+                    {
+                        DataGridViewCheckBoxCell chk = row.Cells["cb_chosenStudent"] as DataGridViewCheckBoxCell;
+                        chk.Value = false;
+                    }
+                }
+
+                DataGridViewCheckBoxCell clickedCheckBox = dataGridView1.Rows[e.RowIndex].Cells["cb_chosenStudent"] as DataGridViewCheckBoxCell;
+                clickedCheckBox.Value = !Convert.ToBoolean(clickedCheckBox.Value);
+                STUDENT_ROW_INDEX = Convert.ToBoolean(clickedCheckBox.Value) ? e.RowIndex : -1;
+            }
+        }
+
+        private void gunaContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void tEACHERToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
