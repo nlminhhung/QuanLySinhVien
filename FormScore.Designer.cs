@@ -73,6 +73,7 @@
             this.c = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteBtnGuna2 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Updatebtnguna2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.bandDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSetBindingSource)).BeginInit();
@@ -97,9 +98,10 @@
             // 
             // tb_points
             // 
-            this.tb_points.Location = new System.Drawing.Point(105, 19);
+            this.tb_points.Location = new System.Drawing.Point(140, 23);
+            this.tb_points.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_points.Name = "tb_points";
-            this.tb_points.Size = new System.Drawing.Size(200, 20);
+            this.tb_points.Size = new System.Drawing.Size(265, 22);
             this.tb_points.TabIndex = 17;
             this.tb_points.TextChanged += new System.EventHandler(this.tb_points_TextChanged);
             // 
@@ -107,18 +109,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 14);
+            this.label1.Location = new System.Drawing.Point(25, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 24);
+            this.label1.Size = new System.Drawing.Size(80, 29);
             this.label1.TabIndex = 14;
             this.label1.Text = "Points";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(192, 397);
+            this.groupBox1.Location = new System.Drawing.Point(256, 489);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(899, 221);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1199, 272);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Scores Board";
@@ -129,17 +134,22 @@
             this.bandDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bandDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gradeCol});
-            this.bandDiem.Location = new System.Drawing.Point(198, 425);
+            this.bandDiem.Location = new System.Drawing.Point(264, 523);
+            this.bandDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bandDiem.Name = "bandDiem";
-            this.bandDiem.Size = new System.Drawing.Size(887, 172);
+            this.bandDiem.RowHeadersWidth = 51;
+            this.bandDiem.Size = new System.Drawing.Size(1183, 212);
             this.bandDiem.TabIndex = 0;
+            this.bandDiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bandDiem_CellContentClick);
             // 
             // gradeCol
             // 
             this.gradeCol.FalseValue = "false";
             this.gradeCol.HeaderText = "Choose";
+            this.gradeCol.MinimumWidth = 6;
             this.gradeCol.Name = "gradeCol";
             this.gradeCol.TrueValue = "true";
+            this.gradeCol.Width = 125;
             // 
             // firstDBDataSet
             // 
@@ -183,9 +193,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(576, 27);
+            this.label2.Location = new System.Drawing.Point(768, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 42);
+            this.label2.Size = new System.Drawing.Size(170, 54);
             this.label2.TabIndex = 23;
             this.label2.Text = "Scores";
             // 
@@ -201,9 +212,11 @@
             this.addressCol,
             this.dateCol});
             this.dataGridView1.DataSource = this.studentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 26);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 32);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(568, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(757, 185);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -211,36 +224,44 @@
             // 
             this.cb_chosenStudent.FalseValue = "false";
             this.cb_chosenStudent.HeaderText = "Choose";
+            this.cb_chosenStudent.MinimumWidth = 6;
             this.cb_chosenStudent.Name = "cb_chosenStudent";
             this.cb_chosenStudent.TrueValue = "true";
+            this.cb_chosenStudent.Width = 125;
             // 
             // studentIDCol
             // 
             this.studentIDCol.DataPropertyName = "StudentID";
             this.studentIDCol.HeaderText = "Student ID";
+            this.studentIDCol.MinimumWidth = 6;
             this.studentIDCol.Name = "studentIDCol";
+            this.studentIDCol.Width = 125;
             // 
             // nameCol
             // 
             this.nameCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.nameCol.DataPropertyName = "Name";
             this.nameCol.HeaderText = "Name";
+            this.nameCol.MinimumWidth = 6;
             this.nameCol.Name = "nameCol";
-            this.nameCol.Width = 60;
+            this.nameCol.Width = 73;
             // 
             // addressCol
             // 
             this.addressCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.addressCol.DataPropertyName = "Address";
             this.addressCol.HeaderText = "Address";
+            this.addressCol.MinimumWidth = 6;
             this.addressCol.Name = "addressCol";
-            this.addressCol.Width = 70;
+            this.addressCol.Width = 87;
             // 
             // dateCol
             // 
             this.dateCol.DataPropertyName = "DateOfBirth";
             this.dateCol.HeaderText = "Date Of Birth";
+            this.dateCol.MinimumWidth = 6;
             this.dateCol.Name = "dateCol";
+            this.dateCol.Width = 125;
             // 
             // studentBindingSource
             // 
@@ -257,9 +278,11 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cb_chosenCourse});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView2.Location = new System.Drawing.Point(8, 23);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(589, 157);
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(785, 193);
             this.dataGridView2.TabIndex = 25;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -267,8 +290,10 @@
             // 
             this.cb_chosenCourse.FalseValue = "false";
             this.cb_chosenCourse.HeaderText = "Choose";
+            this.cb_chosenCourse.MinimumWidth = 6;
             this.cb_chosenCourse.Name = "cb_chosenCourse";
             this.cb_chosenCourse.TrueValue = "true";
+            this.cb_chosenCourse.Width = 125;
             // 
             // courseBindingSource1
             // 
@@ -307,9 +332,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 200);
+            this.groupBox2.Location = new System.Drawing.Point(16, 246);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(588, 191);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(784, 235);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Choose Student";
@@ -317,9 +344,11 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(629, 200);
+            this.groupBox3.Location = new System.Drawing.Point(839, 246);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(601, 191);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(801, 235);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Choose Course";
@@ -327,12 +356,13 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectToolStripMenuItem,
             this.rELOADToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1245, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1660, 28);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -344,44 +374,45 @@
             this.cOURSEToolStripMenuItem,
             this.tEACHERToolStripMenuItem});
             this.selectToolStripMenuItem.Name = "selectToolStripMenuItem";
-            this.selectToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.selectToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.selectToolStripMenuItem.Text = "FILE";
             // 
             // sTUDENTToolStripMenuItem
             // 
             this.sTUDENTToolStripMenuItem.Name = "sTUDENTToolStripMenuItem";
-            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.sTUDENTToolStripMenuItem.Text = "STUDENT";
             this.sTUDENTToolStripMenuItem.Click += new System.EventHandler(this.sTUDENTToolStripMenuItem_Click);
             // 
             // cOURSEToolStripMenuItem
             // 
             this.cOURSEToolStripMenuItem.Name = "cOURSEToolStripMenuItem";
-            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.cOURSEToolStripMenuItem.Text = "COURSE";
             this.cOURSEToolStripMenuItem.Click += new System.EventHandler(this.cOURSEToolStripMenuItem_Click);
             // 
             // tEACHERToolStripMenuItem
             // 
             this.tEACHERToolStripMenuItem.Name = "tEACHERToolStripMenuItem";
-            this.tEACHERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tEACHERToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.tEACHERToolStripMenuItem.Text = "TEACHER";
             this.tEACHERToolStripMenuItem.Click += new System.EventHandler(this.tEACHERToolStripMenuItem_Click);
             // 
             // rELOADToolStripMenuItem
             // 
             this.rELOADToolStripMenuItem.Name = "rELOADToolStripMenuItem";
-            this.rELOADToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.rELOADToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.rELOADToolStripMenuItem.Text = "RELOAD";
             this.rELOADToolStripMenuItem.Click += new System.EventHandler(this.rELOADToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 27);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 33);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(336, 156);
+            this.richTextBox1.Size = new System.Drawing.Size(447, 191);
             this.richTextBox1.TabIndex = 31;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -395,10 +426,11 @@
             this.c.ForeColor = System.Drawing.Color.Black;
             this.c.HoverState.Parent = this.c;
             this.c.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.c.Location = new System.Drawing.Point(105, 44);
+            this.c.Location = new System.Drawing.Point(30, 53);
+            this.c.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.c.Name = "c";
             this.c.ShadowDecoration.Parent = this.c;
-            this.c.Size = new System.Drawing.Size(75, 38);
+            this.c.Size = new System.Drawing.Size(100, 47);
             this.c.TabIndex = 32;
             this.c.Text = "ADD";
             this.c.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -412,34 +444,58 @@
             this.DeleteBtnGuna2.ForeColor = System.Drawing.Color.Black;
             this.DeleteBtnGuna2.HoverState.Parent = this.DeleteBtnGuna2;
             this.DeleteBtnGuna2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.DeleteBtnGuna2.Location = new System.Drawing.Point(213, 44);
+            this.DeleteBtnGuna2.Location = new System.Drawing.Point(167, 53);
+            this.DeleteBtnGuna2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteBtnGuna2.Name = "DeleteBtnGuna2";
             this.DeleteBtnGuna2.ShadowDecoration.Parent = this.DeleteBtnGuna2;
-            this.DeleteBtnGuna2.Size = new System.Drawing.Size(75, 38);
+            this.DeleteBtnGuna2.Size = new System.Drawing.Size(100, 47);
             this.DeleteBtnGuna2.TabIndex = 33;
             this.DeleteBtnGuna2.Text = "DELETE";
             this.DeleteBtnGuna2.Click += new System.EventHandler(this.guna2Button1_Click_1);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.Updatebtnguna2);
             this.groupBox4.Controls.Add(this.DeleteBtnGuna2);
             this.groupBox4.Controls.Add(this.c);
             this.groupBox4.Controls.Add(this.tb_points);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Location = new System.Drawing.Point(480, 106);
+            this.groupBox4.Location = new System.Drawing.Point(640, 130);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(311, 88);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(415, 108);
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Enter Points";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
+            // Updatebtnguna2
+            // 
+            this.Updatebtnguna2.CheckedState.Parent = this.Updatebtnguna2;
+            this.Updatebtnguna2.CustomImages.Parent = this.Updatebtnguna2;
+            this.Updatebtnguna2.FillColor = System.Drawing.Color.Azure;
+            this.Updatebtnguna2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Updatebtnguna2.ForeColor = System.Drawing.Color.Black;
+            this.Updatebtnguna2.HoverState.Parent = this.Updatebtnguna2;
+            this.Updatebtnguna2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Updatebtnguna2.Location = new System.Drawing.Point(305, 53);
+            this.Updatebtnguna2.Margin = new System.Windows.Forms.Padding(4);
+            this.Updatebtnguna2.Name = "Updatebtnguna2";
+            this.Updatebtnguna2.ShadowDecoration.Parent = this.Updatebtnguna2;
+            this.Updatebtnguna2.Size = new System.Drawing.Size(100, 47);
+            this.Updatebtnguna2.TabIndex = 34;
+            this.Updatebtnguna2.Text = "UPDATE";
+            this.Updatebtnguna2.Click += new System.EventHandler(this.Updatebtnguna2_Click);
+            // 
             // FormScore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1245, 629);
+            this.ClientSize = new System.Drawing.Size(1660, 774);
             this.Controls.Add(this.bandDiem);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
@@ -448,7 +504,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.menuStrip1);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormScore";
             this.Text = "SCORES";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -523,5 +582,6 @@
         private Guna.UI2.WinForms.Guna2Button c;
         private Guna.UI2.WinForms.Guna2Button DeleteBtnGuna2;
         private System.Windows.Forms.GroupBox groupBox4;
+        private Guna.UI2.WinForms.Guna2Button Updatebtnguna2;
     }
 }
