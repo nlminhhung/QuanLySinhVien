@@ -248,5 +248,42 @@ namespace QuanLySinhVien
         {
 
         }
+
+        private void Updatebtnguna2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in bandDiem.Rows)
+                {
+                    if (Convert.ToBoolean(row.Cells["gradeCol"].Value) == true)
+                    {
+                        String studentID = row.Cells[1].Value.ToString();
+                        string courseID = row.Cells[2].Value.ToString();
+
+                        float points = float.Parse(tb_points.Text);
+
+                        Modify.ModifyGrade.updateScore(courseID, studentID, points);
+                    }
+                }
+                bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+
+        private void bandDiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void FormScore_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Escape))
+            {
+                this.Close();
+            }
+        }
     }
 }

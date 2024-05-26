@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace QuanLySinhVien.Modify
 {
@@ -52,6 +53,19 @@ namespace QuanLySinhVien.Modify
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@StudentID", studentID);
                 command.Parameters.AddWithValue("@CourseID", courseID);
+                command.ExecuteNonQuery();
+            }
+        }
+        public static void updateScore(String courseID, String studentID, float Points)
+        {
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("pr_update", conn);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@CourseID", courseID);
+                command.Parameters.AddWithValue("@Points", Points);
+                command.Parameters.AddWithValue("@StudentID", studentID);
                 command.ExecuteNonQuery();
             }
         }
