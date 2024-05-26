@@ -99,7 +99,7 @@
             // tb_points
             // 
             this.tb_points.Location = new System.Drawing.Point(140, 23);
-            this.tb_points.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_points.Margin = new System.Windows.Forms.Padding(4);
             this.tb_points.Name = "tb_points";
             this.tb_points.Size = new System.Drawing.Size(265, 22);
             this.tb_points.TabIndex = 17;
@@ -120,9 +120,9 @@
             // groupBox1
             // 
             this.groupBox1.Location = new System.Drawing.Point(256, 489);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1199, 272);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
@@ -135,7 +135,7 @@
             this.bandDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gradeCol});
             this.bandDiem.Location = new System.Drawing.Point(264, 523);
-            this.bandDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bandDiem.Margin = new System.Windows.Forms.Padding(4);
             this.bandDiem.Name = "bandDiem";
             this.bandDiem.RowHeadersWidth = 51;
             this.bandDiem.Size = new System.Drawing.Size(1183, 212);
@@ -213,7 +213,7 @@
             this.dateCol});
             this.dataGridView1.DataSource = this.studentBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 32);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(757, 185);
@@ -279,7 +279,7 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cb_chosenCourse});
             this.dataGridView2.Location = new System.Drawing.Point(8, 23);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(785, 193);
@@ -333,9 +333,9 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(16, 246);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(784, 235);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
@@ -345,9 +345,9 @@
             // 
             this.groupBox3.Controls.Add(this.dataGridView2);
             this.groupBox3.Location = new System.Drawing.Point(839, 246);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(801, 235);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
@@ -407,12 +407,13 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 33);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.BackColor = System.Drawing.Color.Snow;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(13, 33);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(447, 191);
+            this.richTextBox1.Size = new System.Drawing.Size(462, 205);
             this.richTextBox1.TabIndex = 31;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -427,7 +428,7 @@
             this.c.HoverState.Parent = this.c;
             this.c.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.c.Location = new System.Drawing.Point(30, 53);
-            this.c.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.c.Margin = new System.Windows.Forms.Padding(4);
             this.c.Name = "c";
             this.c.ShadowDecoration.Parent = this.c;
             this.c.Size = new System.Drawing.Size(100, 47);
@@ -445,7 +446,7 @@
             this.DeleteBtnGuna2.HoverState.Parent = this.DeleteBtnGuna2;
             this.DeleteBtnGuna2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.DeleteBtnGuna2.Location = new System.Drawing.Point(167, 53);
-            this.DeleteBtnGuna2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteBtnGuna2.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteBtnGuna2.Name = "DeleteBtnGuna2";
             this.DeleteBtnGuna2.ShadowDecoration.Parent = this.DeleteBtnGuna2;
             this.DeleteBtnGuna2.Size = new System.Drawing.Size(100, 47);
@@ -461,9 +462,9 @@
             this.groupBox4.Controls.Add(this.tb_points);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(640, 130);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(415, 108);
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
@@ -504,10 +505,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.menuStrip1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormScore";
             this.Text = "SCORES";
             this.Load += new System.EventHandler(this.Form2_Load);

@@ -52,6 +52,7 @@
             this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.EditBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.bangSinhVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSet)).BeginInit();
@@ -62,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 119);
+            this.label1.Location = new System.Drawing.Point(55, 92);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 29);
@@ -71,16 +72,16 @@
             // 
             // tb_tenSV
             // 
-            this.tb_tenSV.Location = new System.Drawing.Point(167, 169);
-            this.tb_tenSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_tenSV.Location = new System.Drawing.Point(170, 142);
+            this.tb_tenSV.Margin = new System.Windows.Forms.Padding(4);
             this.tb_tenSV.Name = "tb_tenSV";
             this.tb_tenSV.Size = new System.Drawing.Size(265, 22);
             this.tb_tenSV.TabIndex = 1;
             // 
             // tb_mssv
             // 
-            this.tb_mssv.Location = new System.Drawing.Point(167, 126);
-            this.tb_mssv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_mssv.Location = new System.Drawing.Point(170, 99);
+            this.tb_mssv.Margin = new System.Windows.Forms.Padding(4);
             this.tb_mssv.Name = "tb_mssv";
             this.tb_mssv.Size = new System.Drawing.Size(265, 22);
             this.tb_mssv.TabIndex = 3;
@@ -89,7 +90,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 164);
+            this.label2.Location = new System.Drawing.Point(55, 137);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 29);
@@ -98,17 +99,17 @@
             // 
             // date_ngaysinh
             // 
-            this.date_ngaysinh.Location = new System.Drawing.Point(676, 116);
-            this.date_ngaysinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.date_ngaysinh.Location = new System.Drawing.Point(199, 226);
+            this.date_ngaysinh.Margin = new System.Windows.Forms.Padding(4);
             this.date_ngaysinh.Name = "date_ngaysinh";
-            this.date_ngaysinh.Size = new System.Drawing.Size(303, 22);
+            this.date_ngaysinh.Size = new System.Drawing.Size(236, 22);
             this.date_ngaysinh.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(500, 111);
+            this.label3.Location = new System.Drawing.Point(55, 221);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 29);
@@ -117,8 +118,8 @@
             // 
             // tb_diachi
             // 
-            this.tb_diachi.Location = new System.Drawing.Point(167, 209);
-            this.tb_diachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_diachi.Location = new System.Drawing.Point(170, 182);
+            this.tb_diachi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_diachi.Name = "tb_diachi";
             this.tb_diachi.Size = new System.Drawing.Size(265, 22);
             this.tb_diachi.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 204);
+            this.label4.Location = new System.Drawing.Point(55, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 29);
@@ -147,10 +148,10 @@
             this.checkedbox});
             this.bangSinhVien.DataSource = this.studentBindingSource;
             this.bangSinhVien.Location = new System.Drawing.Point(21, 23);
-            this.bangSinhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bangSinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.bangSinhVien.Name = "bangSinhVien";
             this.bangSinhVien.RowHeadersWidth = 51;
-            this.bangSinhVien.Size = new System.Drawing.Size(579, 185);
+            this.bangSinhVien.Size = new System.Drawing.Size(681, 202);
             this.bangSinhVien.TabIndex = 8;
             this.bangSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bangSinhVien_CellClick);
             // 
@@ -214,11 +215,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.bangSinhVien);
-            this.groupBox1.Location = new System.Drawing.Point(16, 249);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(16, 308);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(629, 233);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(716, 233);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student List";
@@ -227,7 +228,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(389, 30);
+            this.label5.Location = new System.Drawing.Point(270, 30);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(184, 54);
@@ -243,7 +244,7 @@
             this.AddBtn.ForeColor = System.Drawing.Color.Black;
             this.AddBtn.HoverState.Parent = this.AddBtn;
             this.AddBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.AddBtn.Location = new System.Drawing.Point(732, 261);
+            this.AddBtn.Location = new System.Drawing.Point(473, 104);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(4);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.ShadowDecoration.Parent = this.AddBtn;
@@ -261,7 +262,7 @@
             this.DeleteBtn.ForeColor = System.Drawing.Color.Black;
             this.DeleteBtn.HoverState.Parent = this.DeleteBtn;
             this.DeleteBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.DeleteBtn.Location = new System.Drawing.Point(732, 316);
+            this.DeleteBtn.Location = new System.Drawing.Point(473, 159);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.ShadowDecoration.Parent = this.DeleteBtn;
@@ -279,13 +280,13 @@
             this.EditBtn.ForeColor = System.Drawing.Color.Black;
             this.EditBtn.HoverState.Parent = this.EditBtn;
             this.EditBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.EditBtn.Location = new System.Drawing.Point(732, 371);
+            this.EditBtn.Location = new System.Drawing.Point(618, 103);
             this.EditBtn.Margin = new System.Windows.Forms.Padding(4);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.ShadowDecoration.Parent = this.EditBtn;
             this.EditBtn.Size = new System.Drawing.Size(100, 47);
             this.EditBtn.TabIndex = 35;
-            this.EditBtn.Text = "Edit";
+            this.EditBtn.Text = "EDIT";
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // ExitBtn
@@ -297,21 +298,31 @@
             this.ExitBtn.ForeColor = System.Drawing.Color.Black;
             this.ExitBtn.HoverState.Parent = this.ExitBtn;
             this.ExitBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ExitBtn.Location = new System.Drawing.Point(732, 426);
+            this.ExitBtn.Location = new System.Drawing.Point(618, 158);
             this.ExitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.ShadowDecoration.Parent = this.ExitBtn;
             this.ExitBtn.Size = new System.Drawing.Size(100, 47);
             this.ExitBtn.TabIndex = 36;
-            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.Text = "EXIT";
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(16, 67);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(716, 210);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
             // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(762, 554);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.DeleteBtn);
@@ -326,7 +337,8 @@
             this.Controls.Add(this.tb_tenSV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormStudent";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -364,6 +376,7 @@
         private Guna.UI2.WinForms.Guna2Button DeleteBtn;
         private Guna.UI2.WinForms.Guna2Button EditBtn;
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

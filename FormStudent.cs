@@ -194,7 +194,7 @@ namespace QuanLySinhVien
                 string diaChi = tb_diachi.Text;
                 if (mssv.Trim() == "") { MessageBox.Show("ID is required!"); return; }
                 if (tenSV.Trim() == "") { MessageBox.Show("Name is required!"); return; }
-                if (diaChi.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
+                if (diaChi.Trim() == "") { MessageBox.Show("This field is not empty"); return; }
                 if (ngaySinh.GetType() != typeof(DateTime)) { MessageBox.Show("Date of birth is not valid!"); return; }
                 Student sv = new Student(tenSV, mssv, diaChi, ngaySinh);
 

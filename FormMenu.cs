@@ -41,14 +41,12 @@ namespace QuanLySinhVien
 
         private void gunA2AverageBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form formStatistics = new FormStatistics();
             formStatistics.ShowDialog();
         }
 
         private void c_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form formScore = new FormScore();
             formScore.ShowDialog();
         }
