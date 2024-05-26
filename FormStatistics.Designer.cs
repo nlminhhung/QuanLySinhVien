@@ -36,6 +36,7 @@
             this.firstDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableAdapter = new QuanLySinhVien.firstDBDataSetTableAdapters.StudentTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSet)).BeginInit();
@@ -56,11 +57,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 36);
+            this.label1.Location = new System.Drawing.Point(300, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 29);
+            this.label1.Size = new System.Drawing.Size(170, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Students Average Score";
+            this.label1.Text = "Course Report";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
@@ -70,7 +72,7 @@
             this.groupBox1.Size = new System.Drawing.Size(657, 298);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Student Scores";
+            this.groupBox1.Text = "Report View";
             // 
             // firstDBDataSet
             // 
@@ -91,12 +93,27 @@
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Display student AVG score",
+            "Displays the number of students registered for each courses",
+            "Displays the total number of subjects the teacher is teaching"});
+            this.comboBox1.Location = new System.Drawing.Point(181, 83);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(389, 21);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // FormStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(763, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormStatistics";
@@ -121,5 +138,6 @@
         private firstDBDataSet firstDBDataSet;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private firstDBDataSetTableAdapters.StudentTableAdapter studentTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

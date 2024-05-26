@@ -377,21 +377,21 @@
             // sTUDENTToolStripMenuItem
             // 
             this.sTUDENTToolStripMenuItem.Name = "sTUDENTToolStripMenuItem";
-            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.sTUDENTToolStripMenuItem.Text = "STUDENT";
             this.sTUDENTToolStripMenuItem.Click += new System.EventHandler(this.sTUDENTToolStripMenuItem_Click);
             // 
             // cOURSEToolStripMenuItem
             // 
             this.cOURSEToolStripMenuItem.Name = "cOURSEToolStripMenuItem";
-            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cOURSEToolStripMenuItem.Text = "COURSE";
             this.cOURSEToolStripMenuItem.Click += new System.EventHandler(this.cOURSEToolStripMenuItem_Click);
             // 
             // tEACHERToolStripMenuItem
             // 
             this.tEACHERToolStripMenuItem.Name = "tEACHERToolStripMenuItem";
-            this.tEACHERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tEACHERToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.tEACHERToolStripMenuItem.Text = "TEACHER";
             this.tEACHERToolStripMenuItem.Click += new System.EventHandler(this.tEACHERToolStripMenuItem_Click);
             // 
@@ -413,8 +413,8 @@
             // 
             // FormScore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1242, 748);
             this.Controls.Add(this.richTextBox1);

@@ -11,7 +11,7 @@ namespace QuanLySinhVien
     {
         public static SqlConnection getConnection()
         {
-            string query = "Data Source=DESKTOP-UE2LPMV;Initial Catalog=firstDB;Integrated Security=True;";
+            string query = "Data Source=ADMIN;Initial Catalog=firstDB;Integrated Security=True;";
             SqlConnection conn = new SqlConnection(query);
             return conn;
         }
