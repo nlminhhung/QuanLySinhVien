@@ -56,16 +56,17 @@ namespace QuanLySinhVien.Modify
                 command.ExecuteNonQuery();
             }
         }
-        public static void updateScore(String courseID, String studentID, float Points)
+        public static void updateScore(string courseID, string studentID, float Points, string grading)
         {
             using (SqlConnection conn = Connection.getConnection())
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("pr_update", conn);
+                SqlCommand command = new SqlCommand("pr_updateGrade", conn);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@CourseID", courseID);
-                command.Parameters.AddWithValue("@Points", Points);
                 command.Parameters.AddWithValue("@StudentID", studentID);
+                command.Parameters.AddWithValue("@Points", Points);
+                command.Parameters.AddWithValue("@Grading", grading);
                 command.ExecuteNonQuery();
             }
         }

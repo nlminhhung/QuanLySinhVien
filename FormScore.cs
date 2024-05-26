@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -255,23 +256,25 @@ namespace QuanLySinhVien
             {
                 foreach (DataGridViewRow row in bandDiem.Rows)
                 {
-                    if (Convert.ToBoolean(row.Cells["gradeCol"].Value) == true)
+                    if (Convert.ToBoolean(row.Cells["Grading"].Value) == true)
                     {
-                        String studentID = row.Cells[1].Value.ToString();
+                        string studentID = row.Cells[1].Value.ToString();
                         string courseID = row.Cells[2].Value.ToString();
-
-                        float points = float.Parse(tb_points.Text);
-
-                        Modify.ModifyGrade.updateScore(courseID, studentID, points);
+                        float points = float.Parse(row.Cells["Points"].Value.ToString());
+                        Grade grade = new Grade(studentID, courseID, points);
+                        Modify.ModifyGrade.insertGrade(grade);
+                        String grading = grade.ToString();
+                        Modify.ModifyGrade.updateScore(courseID, studentID, points, grading);
                     }
                 }
                 bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error occurred:\n {ex.Message}");
             }
         }
+
 
 
         private void bandDiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
