@@ -56,7 +56,7 @@ namespace QuanLySinhVien.Modify
                 command.ExecuteNonQuery();
             }
         }
-        public static void updateScore(string courseID, string studentID, float Points, string grading)
+        public static void updateScore(string courseID, string studentID, float Points, Char grading)
         {
             using (SqlConnection conn = Connection.getConnection())
             {

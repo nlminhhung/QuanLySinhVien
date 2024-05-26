@@ -254,20 +254,50 @@ namespace QuanLySinhVien
         {
             try
             {
+                 List<DataGridViewRow> rows = new List<DataGridViewRow>();
                 foreach (DataGridViewRow row in bandDiem.Rows)
                 {
-                    if (Convert.ToBoolean(row.Cells["Grading"].Value) == true)
+                    if (Convert.ToBoolean(row.Cells["gradeCol"].Value) == true)
                     {
-                        string studentID = row.Cells[1].Value.ToString();
-                        string courseID = row.Cells[2].Value.ToString();
-                        float points = float.Parse(row.Cells["Points"].Value.ToString());
-                        Grade grade = new Grade(studentID, courseID, points);
-                        Modify.ModifyGrade.insertGrade(grade);
-                        String grading = grade.ToString();
-                        Modify.ModifyGrade.updateScore(courseID, studentID, points, grading);
+                        rows.Add(row);
                     }
                 }
+                foreach (DataGridViewRow row in rows)
+                {
+
+                    string studentID = row.Cells[1].Value.ToString();
+                    string courseID = row.Cells[2].Value.ToString();
+                    float points = float.Parse(tb_points.Text); // Get Points 
+                    Char grading;
+                    if (points >= 0 && points <= 25)
+                    {
+                        grading = 'D';
+                    }
+                    else if (points >= 26 && points <= 50)
+                    {
+                        grading = 'C';
+                    }
+                    else if (points >= 51 && points <= 75)
+                    {
+                        grading = 'B';
+                    }
+                    else if (points >= 76 && points <= 100)
+                    {
+                        grading = 'A';
+                    }
+                    else
+                    {
+                        throw new ArgumentOutOfRangeException("Points must be between 0 and 100.");
+                    }
+
+                    Modify.ModifyGrade.updateScore(courseID, studentID, points, grading);
+                    
+
+                }
                 bandDiem.DataSource = Modify.ModifyGrade.getAllGrade();
+            }
+            catch(ArgumentOutOfRangeException arex) { 
+                MessageBox.Show($"{arex.Message}");
             }
             catch (Exception ex)
             {

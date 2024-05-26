@@ -145,5 +145,106 @@ namespace QuanLySinhVien
                 return;
             }
         }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int courseYear = int.Parse(tb_courseYear.Text);
+                string courseID = tb_courseID.Text;
+                string courseName = tb_courseName.Text;
+
+                if (courseID.Trim() == "")
+                {
+                    MessageBox.Show("courseID is required!");
+                    return;
+                }
+                if (courseName.Trim() == "")
+                {
+                    MessageBox.Show("courseName is required!");
+                    return;
+                }
+                if (courseYear.GetType() != typeof(int) || courseYear < 0)
+                {
+                    MessageBox.Show("courseYear is not valid");
+                    return;
+                }
+                DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
+                string teacherID = teacherRow.Cells[1].Value.ToString();
+                Course course = new Course(courseName, courseID, courseYear, teacherID);
+                Modify.ModifyCourse.insertCourse(course);
+                dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong");
+            }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string courseID = tb_courseID.Text;
+                string courseName = tb_courseName.Text;
+                string year = tb_courseYear.Text;
+                int courseYear = int.Parse(year);
+                DataGridViewRow teacherRow = dataGridView1.Rows[TEACHER_ROW_INDEX];
+                string teacherID = teacherRow.Cells[1].Value.ToString();
+
+                if (courseID.Trim() == "") { MessageBox.Show("courseID is required!"); return; }
+                if (courseName.Trim() == "") { MessageBox.Show("courseName is required!"); return; }
+                if (year.Trim() == "") { MessageBox.Show("year is required!"); return; }
+                Course course = new Course(courseName, courseID, courseYear, teacherID);
+                Modify.ModifyCourse.updateCourse(course);
+                dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong!");
+                return;
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<DataGridViewRow> rows = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+                    if (Convert.ToBoolean(row.Cells["cb_chosenCourse"].Value) == true)
+                    {
+                        rows.Add(row);
+                    }
+                }
+                foreach (DataGridViewRow row in rows)
+                {
+                    Modify.ModifyCourse.deleteCourse(row.Cells[1].Value.ToString());
+                }
+                dataGridView2.DataSource = Modify.ModifyCourse.getAllCourse();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                MessageBox.Show("Student is not found for delete!");
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
