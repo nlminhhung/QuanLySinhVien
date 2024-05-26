@@ -28,5 +28,40 @@ namespace QuanLySinhVien
             Form formScore = new FormScore();
             formScore.ShowDialog();
         }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunA2AverageBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form formStatistics = new FormStatistics();
+            formStatistics.ShowDialog();
+        }
+
+        private void c_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form formScore = new FormScore();
+            formScore.ShowDialog();
+        }
+
+        private void GunaExitbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
+        }
     }
+
 }
