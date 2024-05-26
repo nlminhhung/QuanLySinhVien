@@ -132,5 +132,86 @@ namespace QuanLySinhVien
             }
         }
 
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mssv = tb_mssv.Text;
+                string tenSV = tb_tenSV.Text;
+                DateTime ngaySinh = date_ngaysinh.Value;
+                string diaChi = tb_diachi.Text;
+
+                if (mssv.Trim() == "") { MessageBox.Show("ID is required!"); return; }
+                if (tenSV.Trim() == "") { MessageBox.Show("Name is required!"); return; }
+                if (ngaySinh.GetType() != typeof(DateTime)) { MessageBox.Show("Date of birth is not valid!"); return; }
+                Student sv = new Student(tenSV, mssv, diaChi, ngaySinh);
+
+                Modify.ModifyStudent.insertSinhVien(sv);
+                //MessageBox.Show("Them thanh cong!");
+                bangSinhVien.DataSource = Modify.ModifyStudent.getAllSinhVien();
+            }
+            catch
+            {
+                MessageBox.Show("ID has been used!");
+                //MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<DataGridViewRow> rows = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in bangSinhVien.Rows)
+                {
+                    if (Convert.ToBoolean(row.Cells["checkedBox"].Value) == true)
+                    {
+                        rows.Add(row);
+                    }
+                }
+                foreach (DataGridViewRow row in rows)
+                {
+                    Modify.ModifyStudent.deleteSinhVien(row.Cells[0].Value.ToString());
+                }
+
+                bangSinhVien.DataSource = Modify.ModifyStudent.getAllSinhVien();
+            }
+            catch
+            {
+                MessageBox.Show("Can not find student to delete!");
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mssv = tb_mssv.Text;
+                string tenSV = tb_tenSV.Text;
+                DateTime ngaySinh = date_ngaysinh.Value;
+                string diaChi = tb_diachi.Text;
+                if (mssv.Trim() == "") { MessageBox.Show("ID is required!"); return; }
+                if (tenSV.Trim() == "") { MessageBox.Show("Name is required!"); return; }
+                if (diaChi.Trim() == "") { MessageBox.Show("Khong duoc de trong!"); return; }
+                if (ngaySinh.GetType() != typeof(DateTime)) { MessageBox.Show("Date of birth is not valid!"); return; }
+                Student sv = new Student(tenSV, mssv, diaChi, ngaySinh);
+
+                Modify.ModifyStudent.updateSinhVien(sv);
+                bangSinhVien.DataSource = Modify.ModifyStudent.getAllSinhVien();
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong!");
+                //MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

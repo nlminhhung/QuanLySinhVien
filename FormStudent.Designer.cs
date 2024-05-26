@@ -46,12 +46,12 @@
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.firstDBDataSet = new QuanLySinhVien.firstDBDataSet();
             this.studentTableAdapter = new QuanLySinhVien.firstDBDataSetTableAdapters.StudentTableAdapter();
-            this.button_them = new System.Windows.Forms.Button();
-            this.button_xoa = new System.Windows.Forms.Button();
-            this.button_sua = new System.Windows.Forms.Button();
-            this.button_thoat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.EditBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.bangSinhVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstDBDataSet)).BeginInit();
@@ -62,67 +62,75 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 97);
+            this.label1.Location = new System.Drawing.Point(52, 119);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 24);
+            this.label1.Size = new System.Drawing.Size(36, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
             // tb_tenSV
             // 
-            this.tb_tenSV.Location = new System.Drawing.Point(125, 137);
+            this.tb_tenSV.Location = new System.Drawing.Point(167, 169);
+            this.tb_tenSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_tenSV.Name = "tb_tenSV";
-            this.tb_tenSV.Size = new System.Drawing.Size(200, 20);
+            this.tb_tenSV.Size = new System.Drawing.Size(265, 22);
             this.tb_tenSV.TabIndex = 1;
             // 
             // tb_mssv
             // 
-            this.tb_mssv.Location = new System.Drawing.Point(125, 102);
+            this.tb_mssv.Location = new System.Drawing.Point(167, 126);
+            this.tb_mssv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_mssv.Name = "tb_mssv";
-            this.tb_mssv.Size = new System.Drawing.Size(200, 20);
+            this.tb_mssv.Size = new System.Drawing.Size(265, 22);
             this.tb_mssv.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 133);
+            this.label2.Location = new System.Drawing.Point(52, 164);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 24);
+            this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
             // date_ngaysinh
             // 
-            this.date_ngaysinh.Location = new System.Drawing.Point(507, 94);
+            this.date_ngaysinh.Location = new System.Drawing.Point(676, 116);
+            this.date_ngaysinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.date_ngaysinh.Name = "date_ngaysinh";
-            this.date_ngaysinh.Size = new System.Drawing.Size(228, 20);
+            this.date_ngaysinh.Size = new System.Drawing.Size(303, 22);
             this.date_ngaysinh.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(375, 90);
+            this.label3.Location = new System.Drawing.Point(500, 111);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 24);
+            this.label3.Size = new System.Drawing.Size(142, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Date of birth";
             // 
             // tb_diachi
             // 
-            this.tb_diachi.Location = new System.Drawing.Point(125, 170);
+            this.tb_diachi.Location = new System.Drawing.Point(167, 209);
+            this.tb_diachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_diachi.Name = "tb_diachi";
-            this.tb_diachi.Size = new System.Drawing.Size(200, 20);
+            this.tb_diachi.Size = new System.Drawing.Size(265, 22);
             this.tb_diachi.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 166);
+            this.label4.Location = new System.Drawing.Point(52, 204);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.Size = new System.Drawing.Size(102, 29);
             this.label4.TabIndex = 6;
             this.label4.Text = "Address";
             // 
@@ -138,9 +146,11 @@
             this.dateOfBirthDataGridViewTextBoxColumn,
             this.checkedbox});
             this.bangSinhVien.DataSource = this.studentBindingSource;
-            this.bangSinhVien.Location = new System.Drawing.Point(16, 19);
+            this.bangSinhVien.Location = new System.Drawing.Point(21, 23);
+            this.bangSinhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bangSinhVien.Name = "bangSinhVien";
-            this.bangSinhVien.Size = new System.Drawing.Size(434, 150);
+            this.bangSinhVien.RowHeadersWidth = 51;
+            this.bangSinhVien.Size = new System.Drawing.Size(579, 185);
             this.bangSinhVien.TabIndex = 8;
             this.bangSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bangSinhVien_CellClick);
             // 
@@ -149,37 +159,43 @@
             this.studentIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
             this.studentIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.studentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            this.studentIDDataGridViewTextBoxColumn.Width = 43;
+            this.studentIDDataGridViewTextBoxColumn.Width = 49;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 60;
+            this.nameDataGridViewTextBoxColumn.Width = 73;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Width = 70;
+            this.addressDataGridViewTextBoxColumn.Width = 87;
             // 
             // dateOfBirthDataGridViewTextBoxColumn
             // 
             this.dateOfBirthDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
             this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Date Of Birth";
+            this.dateOfBirthDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
-            this.dateOfBirthDataGridViewTextBoxColumn.Width = 93;
+            this.dateOfBirthDataGridViewTextBoxColumn.Width = 110;
             // 
             // checkedbox
             // 
             this.checkedbox.HeaderText = "choose";
+            this.checkedbox.MinimumWidth = 6;
             this.checkedbox.Name = "checkedbox";
+            this.checkedbox.Width = 125;
             // 
             // studentBindingSource
             // 
@@ -195,77 +211,112 @@
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
             // 
-            // button_them
-            // 
-            this.button_them.Location = new System.Drawing.Point(534, 211);
-            this.button_them.Name = "button_them";
-            this.button_them.Size = new System.Drawing.Size(75, 23);
-            this.button_them.TabIndex = 9;
-            this.button_them.Text = "Add";
-            this.button_them.UseVisualStyleBackColor = true;
-            this.button_them.Click += new System.EventHandler(this.button_them_Click);
-            // 
-            // button_xoa
-            // 
-            this.button_xoa.Location = new System.Drawing.Point(534, 259);
-            this.button_xoa.Name = "button_xoa";
-            this.button_xoa.Size = new System.Drawing.Size(75, 23);
-            this.button_xoa.TabIndex = 10;
-            this.button_xoa.Text = "Delete";
-            this.button_xoa.UseVisualStyleBackColor = true;
-            this.button_xoa.Click += new System.EventHandler(this.button_xoa_Click);
-            // 
-            // button_sua
-            // 
-            this.button_sua.Location = new System.Drawing.Point(534, 304);
-            this.button_sua.Name = "button_sua";
-            this.button_sua.Size = new System.Drawing.Size(75, 23);
-            this.button_sua.TabIndex = 11;
-            this.button_sua.Text = "Edit";
-            this.button_sua.UseVisualStyleBackColor = true;
-            this.button_sua.Click += new System.EventHandler(this.button_sua_Click);
-            // 
-            // button_thoat
-            // 
-            this.button_thoat.Location = new System.Drawing.Point(534, 348);
-            this.button_thoat.Name = "button_thoat";
-            this.button_thoat.Size = new System.Drawing.Size(75, 23);
-            this.button_thoat.TabIndex = 12;
-            this.button_thoat.Text = "Exit";
-            this.button_thoat.UseVisualStyleBackColor = true;
-            this.button_thoat.Click += new System.EventHandler(this.button_thoat_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.bangSinhVien);
-            this.groupBox1.Location = new System.Drawing.Point(12, 202);
+            this.groupBox1.Location = new System.Drawing.Point(16, 249);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(472, 189);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(629, 233);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sach";
+            this.groupBox1.Text = "Student List";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(292, 24);
+            this.label5.Location = new System.Drawing.Point(389, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 42);
+            this.label5.Size = new System.Drawing.Size(184, 54);
             this.label5.TabIndex = 15;
             this.label5.Text = "Student";
             // 
+            // AddBtn
+            // 
+            this.AddBtn.CheckedState.Parent = this.AddBtn;
+            this.AddBtn.CustomImages.Parent = this.AddBtn;
+            this.AddBtn.FillColor = System.Drawing.Color.Azure;
+            this.AddBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AddBtn.ForeColor = System.Drawing.Color.Black;
+            this.AddBtn.HoverState.Parent = this.AddBtn;
+            this.AddBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.AddBtn.Location = new System.Drawing.Point(732, 261);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.ShadowDecoration.Parent = this.AddBtn;
+            this.AddBtn.Size = new System.Drawing.Size(100, 47);
+            this.AddBtn.TabIndex = 33;
+            this.AddBtn.Text = "ADD";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.CheckedState.Parent = this.DeleteBtn;
+            this.DeleteBtn.CustomImages.Parent = this.DeleteBtn;
+            this.DeleteBtn.FillColor = System.Drawing.Color.Azure;
+            this.DeleteBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DeleteBtn.ForeColor = System.Drawing.Color.Black;
+            this.DeleteBtn.HoverState.Parent = this.DeleteBtn;
+            this.DeleteBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.DeleteBtn.Location = new System.Drawing.Point(732, 316);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.ShadowDecoration.Parent = this.DeleteBtn;
+            this.DeleteBtn.Size = new System.Drawing.Size(100, 47);
+            this.DeleteBtn.TabIndex = 34;
+            this.DeleteBtn.Text = "DELETE";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // EditBtn
+            // 
+            this.EditBtn.CheckedState.Parent = this.EditBtn;
+            this.EditBtn.CustomImages.Parent = this.EditBtn;
+            this.EditBtn.FillColor = System.Drawing.Color.Azure;
+            this.EditBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.EditBtn.ForeColor = System.Drawing.Color.Black;
+            this.EditBtn.HoverState.Parent = this.EditBtn;
+            this.EditBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EditBtn.Location = new System.Drawing.Point(732, 371);
+            this.EditBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.ShadowDecoration.Parent = this.EditBtn;
+            this.EditBtn.Size = new System.Drawing.Size(100, 47);
+            this.EditBtn.TabIndex = 35;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.CheckedState.Parent = this.ExitBtn;
+            this.ExitBtn.CustomImages.Parent = this.ExitBtn;
+            this.ExitBtn.FillColor = System.Drawing.Color.Azure;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ExitBtn.ForeColor = System.Drawing.Color.Black;
+            this.ExitBtn.HoverState.Parent = this.ExitBtn;
+            this.ExitBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ExitBtn.Location = new System.Drawing.Point(732, 426);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.ShadowDecoration.Parent = this.ExitBtn;
+            this.ExitBtn.Size = new System.Drawing.Size(100, 47);
+            this.ExitBtn.TabIndex = 36;
+            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
             // FormStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.EditBtn);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button_thoat);
-            this.Controls.Add(this.button_sua);
-            this.Controls.Add(this.button_xoa);
-            this.Controls.Add(this.button_them);
             this.Controls.Add(this.tb_diachi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -275,6 +326,7 @@
             this.Controls.Add(this.tb_tenSV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormStudent";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -306,12 +358,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkedbox;
-        private System.Windows.Forms.Button button_them;
-        private System.Windows.Forms.Button button_xoa;
-        private System.Windows.Forms.Button button_sua;
-        private System.Windows.Forms.Button button_thoat;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button AddBtn;
+        private Guna.UI2.WinForms.Guna2Button DeleteBtn;
+        private Guna.UI2.WinForms.Guna2Button EditBtn;
+        private Guna.UI2.WinForms.Guna2Button ExitBtn;
     }
 }
 
